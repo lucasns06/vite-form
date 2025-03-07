@@ -19,6 +19,9 @@ const Registrar = () => {
     }
     useEffect(() => {
         const entradas = document.querySelectorAll('.inputContainer');
+        const entradasDois = document.querySelectorAll('input');
+
+        // var tl = gsap.timeline();
         gsap.fromTo(entradas,
             {
                 y: 20,
@@ -28,6 +31,17 @@ const Registrar = () => {
                 y: 0,
                 opacity: 1,
                 stagger: 0.2
+            }
+        )
+        gsap.fromTo(entradasDois,
+            {
+                outlineColor: 'white'
+            },
+            {
+                outlineColor: 'rgba(255, 255, 255, 0.507)',
+                stagger: 0.2,
+                clearProps: 'all',
+                delay: 2
             }
         )
     }, [])
