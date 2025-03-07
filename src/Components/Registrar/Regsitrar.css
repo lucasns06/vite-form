@@ -43,7 +43,7 @@
     color: white;
 }
 .registroContainer form input:focus{
-    outline: 2px solid red;
+    outline: 2px solid rgb(255, 255, 255);
 }
 form h1{
     text-align: center;

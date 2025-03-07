@@ -35,7 +35,7 @@ const Registrar = () => {
         )
         gsap.fromTo(entradasDois,
             {
-                outlineColor: 'white'
+                outlineColor: 'white',
             },
             {
                 outlineColor: 'rgba(255, 255, 255, 0.507)',
@@ -64,7 +64,7 @@ const Registrar = () => {
                 <br />
                 <div className='inputContainer'>
                     <input
-                        type='text'
+                        type='number'
                         placeholder='Idade'
                         required
                         value={idade}
@@ -88,7 +88,7 @@ const Registrar = () => {
                 <br />
                 <div className='inputContainer'>
                     <input
-                        type='text'
+                        type='email'
                         placeholder='Email'
                         required
                         value={email}
@@ -100,7 +100,7 @@ const Registrar = () => {
                 <br />
                 <div className='inputContainer'>
                     <input
-                        type='text'
+                        type='password'
                         placeholder='Senha'
                         required
                         value={senha}
@@ -112,7 +112,7 @@ const Registrar = () => {
                 <br />
                 <div className='inputContainer'>
                     <input
-                        type='text'
+                        type='number'
                         placeholder='Celular'
                         required
                         value={celular}
