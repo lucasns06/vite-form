@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Regsitrar.css'
 import { FaAddressBook, FaBook, FaDog, FaFacebook, FaLock, FaPhone, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import gsap from 'gsap';
 const Registrar = () => {
     const [nome, setNome] = useState("");
     const [idade, setIdade] = useState("");
@@ -17,7 +17,20 @@ const Registrar = () => {
         event.preventDefault();
         console.log("Dados de Login:", { nome, senha });
     }
-
+    useEffect(() => {
+        const entradas = document.querySelectorAll('.inputContainer');
+        gsap.fromTo(entradas,
+            {
+                y: 20,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.2
+            }
+        )
+    }, [])
     return (
         <div className='registroContainer'>
             <form onSubmit={handleSubmit}>

@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { FaUser, FaLock, FaFacebook } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const Login = () => {
   // Estados para armazenar as entradas do usuário
@@ -16,6 +17,20 @@ const Login = () => {
     // Faz o console log das credenciais do usuário
     console.log("Dados de Login:", { username, password });
   };
+  useEffect(() => {
+      const entradas = document.querySelectorAll('.input-field');
+      gsap.fromTo(entradas,
+          {
+              y: 20,
+              opacity: 0,
+          },
+          {
+              y: 0,
+              opacity: 1,
+              stagger: 0.2
+          }
+      )
+  }, [])
 
   return (
     <div className="container">
