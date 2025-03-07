@@ -1,0 +1,69 @@
+.registroContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: url("../../assets/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 2vw 0;
+}
+.inputContainer{
+    position: relative;
+}
+.registroContainer form{
+    padding: 16px 32px;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.507);
+    max-width: 420px;
+    width: 90%;
+}
+.registroContainer form input{
+    padding: 8px 16px;
+    border-radius: 12px;
+    outline: 2px solid rgba(255, 255, 255, 0.507);
+    text-shadow: none;
+    background: transparent;
+    border: 0;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+.inputContainer .icon{  
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);/*Centralizar o ícono no meio da altura do campo*/
+    font-size: 16px;
+    color: #fff;
+}
+.registroContainer form input::placeholder{
+    color: white;
+}
+.registroContainer form input:focus{
+    outline: 2px solid red;
+}
+form h1{
+    text-align: center;
+}
+.registroContainer button {/*Criar estilo para o botão*/
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  text-shadow: none;/*Tirar a sombra da palavra do botão "Entrar"*/
+}
+.registroContainer .signup-link {/*Criar estilo para "Não tem uma conta? Registrar"*/
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;  
+}
